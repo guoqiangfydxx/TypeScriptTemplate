@@ -1,7 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import Hello from './Hello'
+import VariableDeclaration from './variableDeclaration'
 import { Button } from 'antd'
+import DataType from './dataType'
 import './App.less';
 
 const App: React.FC = () => {
@@ -22,7 +24,9 @@ const App: React.FC = () => {
         </a>
         <Button size='large'>测试</Button>
         <Hello name='TypeScript' enthusiasmLevel={1} />
+        <VariableDeclaration />
       </header>
+      <DataType />
     </div>
   );
 }
