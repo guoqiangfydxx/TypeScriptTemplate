@@ -10,6 +10,9 @@ import TestGeneric from './generic'
 import TestEnum from './enum'
 import TypeCompability from './typeCompability'
 import AdvancedType from './advancedType'
+import DeclareMerge from './declareMerge'
+import TestJSx from './testJsx'
+import MyJsx from './my'
 import './App.less';
 
 const App: React.FC = () => {
@@ -39,6 +42,9 @@ const App: React.FC = () => {
       <TestEnum />
       <TypeCompability />
       <AdvancedType />
+      <DeclareMerge />
+      <TestJSx />
+      <MyJsx />
     </div>
   );
 }

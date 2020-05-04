@@ -392,7 +392,8 @@ module.exports = function(webpackEnv) {
                       libraryName: 'antd',   // 暴露的库名
                       style: 'css' // 直接将antd样式文件动态编译成行内样式插入，就不需要每次都导入
                     }
-                  ]
+                  ],
+                  ['@babel/plugin-transform-typescript', { allowNamespaces: true, isTSX: true }]
                 ],
                 // This is a feature of `babel-loader` for webpack (not Babel itself).
                 // It enables caching results in ./node_modules/.cache/babel-loader/
