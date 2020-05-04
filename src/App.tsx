@@ -4,6 +4,12 @@ import Hello from './Hello'
 import VariableDeclaration from './variableDeclaration'
 import { Button } from 'antd'
 import DataType from './dataType'
+import TestClass from './class'
+import TestFunc from './func'
+import TestGeneric from './generic'
+import TestEnum from './enum'
+import TypeCompability from './typeCompability'
+import AdvancedType from './advancedType'
 import './App.less';
 
 const App: React.FC = () => {
@@ -27,6 +33,12 @@ const App: React.FC = () => {
         <VariableDeclaration />
       </header>
       <DataType />
+      <TestClass />
+      <TestFunc />
+      <TestGeneric />
+      <TestEnum />
+      <TypeCompability />
+      <AdvancedType />
     </div>
   );
 }
