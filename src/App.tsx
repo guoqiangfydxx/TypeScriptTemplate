@@ -13,6 +13,7 @@ import AdvancedType from './advancedType'
 import DeclareMerge from './declareMerge'
 import TestJSx from './testJsx'
 import MyJsx from './my'
+import DecoratorTest from './decorator'
 import './App.less';
 
 const App: React.FC = () => {
@@ -45,6 +46,7 @@ const App: React.FC = () => {
       <DeclareMerge />
       <TestJSx />
       <MyJsx />
+      <DecoratorTest />
     </div>
   );
 }
