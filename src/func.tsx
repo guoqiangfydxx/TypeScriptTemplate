@@ -26,6 +26,9 @@ function pickCard(x: any): any {
     }
 }
 
+let newAdd: (x: number, y: number) => number
+newAdd = (a, b) => a + b
+
 class TestFunc extends React.Component {
     constructor(props: any) {
         super(props)
@@ -59,6 +62,7 @@ class TestFunc extends React.Component {
     }
 
     render() {
+        console.log('newAdd>>>>', newAdd(6 , 8))
         console.log('为函数增加定义类型')
         console.log(this.myAdd(89208.52934, 989.53353))
 

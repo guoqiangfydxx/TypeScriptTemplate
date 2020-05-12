@@ -14,6 +14,8 @@ import DeclareMerge from './declareMerge'
 import TestJSx from './testJsx'
 import MyJsx from './my'
 import DecoratorTest from './decorator'
+import FCCounter from './functional'
+import Type from './type'
 import './App.less';
 
 const App: React.FC = () => {
@@ -47,6 +49,8 @@ const App: React.FC = () => {
       <TestJSx />
       <MyJsx />
       <DecoratorTest />
+      <FCCounter label={'文字'} count={5} />
+      <Type />
     </div>
   );
 }
