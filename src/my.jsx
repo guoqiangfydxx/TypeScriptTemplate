@@ -1,5 +1,8 @@
 import React from 'react'
 class MyJsx extends React.Component {
+    /**
+     * @param {any} props
+     */
     constructor(props) {
         super(props)
         this.state = {}

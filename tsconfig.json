@@ -16,9 +16,16 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react",
-    "experimentalDecorators": true
+    // "noEmit": true,
+    "jsx": "react", 
+    "experimentalDecorators": true,
+    // "outDir": "./test",
+    // "rootDir": "./src",
+    "checkJs": true,
+    // 是否生成生命文件
+    // "declaration": true
+    // "sourceMap": true
+    "inlineSourceMap": true
   },
   "include": [
     "src"
