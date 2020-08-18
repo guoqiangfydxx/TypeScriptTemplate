@@ -16,6 +16,8 @@ import MyJsx from './my'
 import DecoratorTest from './decorator'
 import FCCounter from './functional'
 import Type from './type'
+import LetTest from './let'
+import StrTest from './str'
 import './App.less';
 
 const App: React.FC = () => {
@@ -24,7 +26,7 @@ const App: React.FC = () => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Edit <code>src/App.tsx</code> and save to reload.0090
         </p>
         <a
           className="App-link"
@@ -51,6 +53,8 @@ const App: React.FC = () => {
       <DecoratorTest />
       <FCCounter label={'文字'} count={5} />
       <Type />
+      <LetTest />
+      <StrTest />
     </div>
   );
 }
