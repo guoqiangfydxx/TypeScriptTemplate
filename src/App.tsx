@@ -18,6 +18,8 @@ import FCCounter from './functional'
 import Type from './type'
 import LetTest from './let'
 import StrTest from './str'
+import NumberTest from './number'
+import FunctionTest from './function'
 import './App.less';
 
 const App: React.FC = () => {
@@ -55,6 +57,8 @@ const App: React.FC = () => {
       <Type />
       <LetTest />
       <StrTest />
+      <NumberTest />
+      <FunctionTest />
     </div>
   );
 }

@@ -60,6 +60,32 @@ class StrTest extends React.Component<any, any> {
         console.log('fromCodePoint', String.fromCodePoint(0x20BB7))
         console.log('fromCodePoint', String.fromCodePoint(0x78, 0x1f680, 0x79))
         // fromCodePoint是直接定义在String这个对象上的，并不是字符串的实例方法
+
+        // codePointAt可以返回对应码点的十进制值
+        const str = '𠮷a'
+        console.log('codePointAt1>>>>', str.codePointAt(0))
+        console.log('codePointAt2', str.codePointAt(1))
+        console.log('codePointAt3', str.codePointAt(2))
+        console.log('codePointAt4', str.codePointAt(3))
+        for (const s of str) {
+            console.log('s>>>>>>>>', s)
+        }
+
+        // includes, startsWith, endsWith
+        const str1 = 'hello world'
+        console.log('includes', str1.includes('rld', 5))
+        console.log('startWiths', str1.startsWith('w', 4))
+        console.log('endsWith', str1.endsWith('o', 5))
+
+        // repeat
+        const str2 = 'pod'.repeat(3)
+        console.log('str2', str2)
+
+        // pasStart和padEnd，字符串补缺
+        const str3 = 'x'.padStart(5,'abc')
+        const str4 = 'x'.padEnd(5, '094')
+        console.log('str3', str3)
+        console.log('str4', str4)
         return <div>字符串扩展</div>
     }
 }
