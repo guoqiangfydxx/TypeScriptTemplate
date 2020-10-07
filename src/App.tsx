@@ -20,6 +20,9 @@ import LetTest from './let'
 import StrTest from './str'
 import NumberTest from './number'
 import FunctionTest from './function'
+import StateTest from './React/state'
+import HOCTest from './React/hoc'
+import PortalTest from './React/portal'
 import './App.less';
 
 const App: React.FC = () => {
@@ -59,6 +62,9 @@ const App: React.FC = () => {
       <StrTest />
       <NumberTest />
       <FunctionTest />
+      <StateTest /> 
+      <HOCTest />
+      <PortalTest />
     </div>
   );
 }
