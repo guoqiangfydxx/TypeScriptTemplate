@@ -23,6 +23,7 @@ import FunctionTest from './function'
 import StateTest from './React/state'
 import HOCTest from './React/hoc'
 import PortalTest from './React/portal'
+import ContextTest from './React/content'
 import './App.less';
 
 const App: React.FC = () => {
@@ -65,6 +66,7 @@ const App: React.FC = () => {
       <StateTest /> 
       <HOCTest />
       <PortalTest />
+      <ContextTest />
     </div>
   );
 }
