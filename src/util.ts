@@ -47,3 +47,9 @@ function getRandomPadding() {
 }
 
 export { isFish, isString, isNumber, getRandomPadding, SpaceRepeatingPadder, StringPadder }
+
+export function addNum() {
+    return {
+        type: 'ADD'
+    }
+}
