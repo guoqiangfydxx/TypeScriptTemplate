@@ -1,31 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import Hello from './Hello'
-import VariableDeclaration from './variableDeclaration'
-import { Button } from 'antd'
-import DataType from './dataType'
-import TestClass from './class'
-import TestFunc from './func'
-import TestGeneric from './generic'
-import TestEnum from './enum'
-import TypeCompability from './typeCompability'
-import AdvancedType from './advancedType'
-import DeclareMerge from './declareMerge'
-import TestJSx from './testJsx'
-import MyJsx from './my'
-import DecoratorTest from './decorator'
-import FCCounter from './functional'
-import Type from './type'
-import LetTest from './let'
-import StrTest from './str'
-import NumberTest from './number'
-import FunctionTest from './function'
-import StateTest from './React/state'
-import HOCTest from './React/hoc'
-import PortalTest from './React/portal'
-import ContextTest from './React/content'
-import ReduxTest from './React/redux'
-import './App.less';
+import React from "react";
+import logo from "./logo.svg";
+import Hello from "./Hello";
+import VariableDeclaration from "./variableDeclaration";
+import { Button } from "antd";
+import DataType from "./dataType";
+import TestClass from "./class";
+import TestFunc from "./func";
+import TestGeneric from "./generic";
+import TestEnum from "./enum";
+import TypeCompability from "./typeCompability";
+import AdvancedType from "./advancedType";
+import DeclareMerge from "./declareMerge";
+import TestJSx from "./testJsx";
+import MyJsx from "./my";
+import DecoratorTest from "./decorator";
+import FCCounter from "./functional";
+import Type from "./type";
+import LetTest from "./let";
+import StrTest from "./str";
+import NumberTest from "./number";
+import FunctionTest from "./function";
+import StateTest from "./React/state";
+import HOCTest from "./React/hoc";
+import PortalTest from "./React/portal";
+import ContextTest from "./React/content";
+import ReduxTest from "./React/redux";
+import TestKeys from "./keys";
+import "./App.less";
 
 const App: React.FC = () => {
   return (
@@ -43,8 +44,8 @@ const App: React.FC = () => {
         >
           Learn React
         </a>
-        <Button size='large'>测试</Button>
-        <Hello name='TypeScript' enthusiasmLevel={1} />
+        <Button size="large">测试</Button>
+        <Hello name="TypeScript" enthusiasmLevel={1} />
         <VariableDeclaration />
       </header>
       <DataType />
@@ -58,19 +59,20 @@ const App: React.FC = () => {
       <TestJSx />
       <MyJsx />
       <DecoratorTest />
-      <FCCounter label={'文字'} count={5} />
+      <FCCounter label={"文字"} count={5} />
       <Type />
       <LetTest />
       <StrTest />
       <NumberTest />
       <FunctionTest />
-      <StateTest /> 
+      <StateTest />
       <HOCTest />
       <PortalTest />
       <ContextTest />
       <ReduxTest />
+      <TestKeys />
     </div>
   );
-}
+};
 
 export default App;
