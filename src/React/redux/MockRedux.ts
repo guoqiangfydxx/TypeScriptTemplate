@@ -1,5 +1,5 @@
 import { compose } from "redux";
-
+import React, { Context } from "react";
 export function createStore(
   reducer: (arg0: any, arg1: any) => any,
   enhancer: any
@@ -16,6 +16,7 @@ export function createStore(
   function dispatch(action: any) {
     currentState = reducer(currentState, action);
     currentListeners.forEach((item) => item());
+    return action;
   }
 
   function subscribe(callback: any) {
@@ -63,7 +64,7 @@ export function thunk({ dispatch, getState }: any) {
   };
 }
 
-export function combineReducer(reducers: { [x: string]: any }) {
+export function combineReducers(reducers: { [x: string]: any }) {
   const reducerKeys: string[] = Object.keys(reducers);
   const finalReducer: { [propKey: string]: any } = {};
   reducerKeys.forEach((item) => {

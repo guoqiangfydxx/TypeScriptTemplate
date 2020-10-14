@@ -26,6 +26,7 @@ import PortalTest from "./React/portal";
 import ContextTest from "./React/content";
 import ReduxTest from "./React/redux";
 import TestKeys from "./keys";
+import TestReactRedux from './React/react-redux'
 import "./App.less";
 
 const App: React.FC = () => {
@@ -71,6 +72,7 @@ const App: React.FC = () => {
       <ContextTest />
       <ReduxTest />
       <TestKeys />
+      <TestReactRedux />
     </div>
   );
 };

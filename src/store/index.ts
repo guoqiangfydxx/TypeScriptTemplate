@@ -1,11 +1,11 @@
-// import { createStore, applyMiddleware } from 'redux'
+// import {  } from "redux";
 import {
-  createStore,
   applyMiddleware,
-  thunk,
-  combineReducer,
+  //   thunk,
+  combineReducers,
+  createStore,
 } from "../React/redux/MockRedux";
-// import thunk from 'redux-thunk'
+import thunk from "redux-thunk";
 const initialState = 0;
 const initialUserState = {
   age: 20,
@@ -27,16 +27,16 @@ function personReducer(
 ) {
   switch (action.type) {
     case "ADDAGE":
-      return Object.assign(state, { age: state.age + action.age });
+      return Object.assign({}, state, { age: state.age + action.age });
     case "MINUSAGE":
-      return Object.assign(state, { age: state.age - action.age });
+      return Object.assign({}, state, { age: state.age - action.age });
     default:
       return state;
   }
 }
 
 const store = createStore(
-  combineReducer({
+  combineReducers({
     counter: countReducer,
     person: personReducer,
   }),
