@@ -30,6 +30,7 @@ import TestReactRedux from './React/react-redux'
 import TestError from './error'
 import TestRef from './React/ref'
 import TestRefHoc from './React/ref/refHox'
+import TestFragments from './React/fragments'
 import "./App.less";
 
 const ref: any = React.createRef()
@@ -85,6 +86,7 @@ const App: React.FC = () => {
       <TestError />
       <TestRef />
       <TestRefHoc ref={ref} />
+      <TestFragments />
     </div>
   );
 };
