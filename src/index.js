@@ -6,9 +6,12 @@ import App from "./App";
 import { Provider } from "./React/redux/mockReactRedux";
 import store from "./store";
 import * as serviceWorker from "./serviceWorker";
+import ErrorBoundary from "./ErrorBoundary";
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
   </Provider>,
   document.getElementById("root")
 );

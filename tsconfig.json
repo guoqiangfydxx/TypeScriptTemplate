@@ -21,7 +21,7 @@
     "experimentalDecorators": true,
     // "outDir": "./test",
     // "rootDir": "./src",
-    "checkJs": true,
+    // "checkJs": true,
     // 是否生成生命文件
     // "declaration": true
     // "sourceMap": true

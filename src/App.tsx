@@ -27,6 +27,7 @@ import ContextTest from "./React/content";
 import ReduxTest from "./React/redux";
 import TestKeys from "./keys";
 import TestReactRedux from './React/react-redux'
+import TestError from './error'
 import "./App.less";
 
 const App: React.FC = () => {
@@ -73,6 +74,7 @@ const App: React.FC = () => {
       <ReduxTest />
       <TestKeys />
       <TestReactRedux />
+      <TestError />
     </div>
   );
 };
