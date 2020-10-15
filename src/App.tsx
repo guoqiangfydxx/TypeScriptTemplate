@@ -31,6 +31,8 @@ import TestError from './error'
 import TestRef from './React/ref'
 import TestRefHoc from './React/ref/refHox'
 import TestFragments from './React/fragments'
+import TestRefsAndDom from './React/refsAndDom'
+import RenderProps from './React/render-props'
 import "./App.less";
 
 const ref: any = React.createRef()
@@ -87,6 +89,8 @@ const App: React.FC = () => {
       <TestRef />
       <TestRefHoc ref={ref} />
       <TestFragments />
+      <TestRefsAndDom />
+      <RenderProps />
     </div>
   );
 };
