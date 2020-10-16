@@ -33,6 +33,8 @@ import TestRefHoc from './React/ref/refHox'
 import TestFragments from './React/fragments'
 import TestRefsAndDom from './React/refsAndDom'
 import RenderProps from './React/render-props'
+import TestMemo from './React/memo'
+import TestChildren from './React/React-children'
 import "./App.less";
 
 const ref: any = React.createRef()
@@ -91,6 +93,8 @@ const App: React.FC = () => {
       <TestFragments />
       <TestRefsAndDom />
       <RenderProps />
+      <TestMemo />
+      <TestChildren />
     </div>
   );
 };
