@@ -30,8 +30,10 @@ class Table extends React.Component<any, any> {
         <Divider>fragments</Divider>
         <table>
           <thead>
-            <th>name</th>
-            <th>details</th>
+            <tr>
+              <th>name</th>
+              <th>details</th>
+            </tr>
           </thead>
           <tbody>
             <tr>

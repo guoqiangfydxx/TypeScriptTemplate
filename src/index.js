@@ -9,9 +9,11 @@ import * as serviceWorker from "./serviceWorker";
 import ErrorBoundary from "./ErrorBoundary";
 ReactDOM.render(
   <Provider store={store}>
-    <ErrorBoundary>
-      <App />
-    </ErrorBoundary>
+    <React.StrictMode>
+      <ErrorBoundary>
+        <App />
+      </ErrorBoundary>
+    </React.StrictMode>
   </Provider>,
   document.getElementById("root")
 );
