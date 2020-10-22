@@ -2,7 +2,7 @@ import React from 'react'
 import TestRenderer from 'react-test-renderer'
 import { Divider } from 'antd'
 
-function Link(props) {
+function Link(props: { page: string | undefined; children: React.ReactNode }) {
 return <a href={props.page}>{props.children}</a>
 }
 
