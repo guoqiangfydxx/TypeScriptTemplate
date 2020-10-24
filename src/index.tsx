@@ -5,11 +5,14 @@ import * as serviceWorker from './serviceWorker';
 // import { Provider } from 'react-redux'
 import { Provider } from "./React/redux/mockReactRedux";
 import store from './store'
+import ErrorBoundary from "./ErrorBoundary";
 import './index.css';
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
   </Provider>
   , document.getElementById('root'));
 

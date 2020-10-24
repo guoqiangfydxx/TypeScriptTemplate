@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "./logo.svg";
 import Hello from "./Hello";
 import VariableDeclaration from "./variableDeclaration";
@@ -28,9 +28,25 @@ import ReduxTest from "./React/redux";
 import TestKeys from "./keys";
 import TestReactRedux from './React/react-redux'
 import TestRouter from './React/router'
+import TestError from './error'
+import TestRef from './React/ref'
+import TestRefHoc from './React/ref/refHox'
+import TestFragments from './React/fragments'
+import TestRefsAndDom from './React/refsAndDom'
+import RenderProps from './React/render-props'
+import TestMemo from './React/memo'
+import TestChildren from './React/React-children'
+import TestComponent from './React/component'
+import TestHooks from './React/hooks'
 import "./App.less";
 
+const ref: any = React.createRef()
 const App: React.FC = () => {
+
+  useEffect(() => {
+    console.log('inApp', ref)
+  })
+
   return (
     <div className="App">
       <header className="App-header">
@@ -75,6 +91,16 @@ const App: React.FC = () => {
       <TestKeys />
       <TestReactRedux />
       <TestRouter/>
+      <TestError />
+      <TestRef />
+      <TestRefHoc ref={ref} />
+      <TestFragments />
+      <TestRefsAndDom />
+      <RenderProps />
+      <TestMemo />
+      <TestChildren />
+      <TestComponent />
+      <TestHooks />
     </div>
   );
 };
