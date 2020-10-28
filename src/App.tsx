@@ -38,6 +38,7 @@ import TestMemo from './React/memo'
 import TestChildren from './React/React-children'
 import TestComponent from './React/component'
 import TestHooks from './React/hooks'
+import TestRoute from './React/router'
 import "./App.less";
 
 const ref: any = React.createRef()
@@ -101,6 +102,7 @@ const App: React.FC = () => {
       <TestChildren />
       <TestComponent />
       <TestHooks />
+      <TestRoute />
     </div>
   );
 };
