@@ -44,7 +44,7 @@ class TestRouter extends React.Component<any, any> {
     return (
       <div>
         <Divider>react-router</Divider>
-        <BrowserRouter basename="/ehi">
+        <BrowserRouter>
           <Link to="/">首页</Link>
           <br />
           <Link to="/user">用户中心</Link>
