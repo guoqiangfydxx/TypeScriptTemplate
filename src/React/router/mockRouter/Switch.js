@@ -20,7 +20,9 @@ class Switch extends React.Component {
                 : context.match;
             }
           });
-          return match ? React.cloneElement(element, { location }) : null;
+          return match
+            ? React.cloneElement(element, { location, computedMatch: match })
+            : null;
         }}
       </RouterContext.Consumer>
     );

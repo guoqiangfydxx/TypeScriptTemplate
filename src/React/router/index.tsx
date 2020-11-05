@@ -74,8 +74,10 @@ class TestRouter extends React.Component<any, any> {
             <Route path="/login" exact component={LoginPage} />
             <Route path="/children" exact component={ChildrenPage} />
             <Route path="/render" exact component={RenderPage} />
-            {/* <Route path="/search/:id" exact component={SearchPage} />
-            <Route component={DetailPage} path={`/search/:id/detail`} /> */}
+            <Route path="/search/:id" exact component={SearchPage} />
+            <Route component={DetailPage} path={`/search/:id/detail`} />
+            {/* // 如果Route没有path参数，将始终被匹配 */}
+            <Route render={() => <div>404</div>} />
           </Switch>
         </BrowserRouter>
       </div>

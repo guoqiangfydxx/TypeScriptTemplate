@@ -1,6 +1,6 @@
 import React from "react";
-import { createBrowserHistory } from "history"
-import { RouterContext } from './context'
+import { createBrowserHistory } from "history";
+import { RouterContext } from "./context";
 class BrowserRouter extends React.Component {
   constructor(props) {
     // eslint-disable-next-line no-undef
@@ -9,6 +9,10 @@ class BrowserRouter extends React.Component {
     this.state = {
       location: this.history.location,
     };
+  }
+
+  static computedMatch(pathname) {
+    return { path: "/", url: "/", params: {}, isExact: pathname === "/" };
   }
 
   componentDidMount() {
@@ -29,6 +33,7 @@ class BrowserRouter extends React.Component {
         value={{
           history: this.history,
           location: this.state.location,
+          match: BrowserRouter.computedMatch(this.state.location.pathname),
         }}
       >
         {this.props.children}
