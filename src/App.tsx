@@ -91,7 +91,7 @@ const App: React.FC = () => {
       <ReduxTest />
       <TestKeys />
       <TestReactRedux />
-      <TestRouter/>
+      <TestRouter />
       <TestError />
       <TestRef />
       <TestRefHoc ref={ref} />

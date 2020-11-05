@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import matchPath from "./matchPath";
 import { RouterContext } from "./context";
 class Route extends React.Component {
@@ -18,6 +18,7 @@ class Route extends React.Component {
             : path
             ? matchPath(location.pathname, this.props)
             : context.match;
+          console.log("match>>>>>>>", match);
           const props = {
             ...context,
             location,
@@ -25,19 +26,21 @@ class Route extends React.Component {
           };
           return (
             <RouterContext.Provider value={props}>
-              {match
-                ? children
-                  ? typeof children === "function"
-                    ? children(props)
-                    : children
-                  : component
-                  ? React.cloneElement(component, props)
-                  : render
-                  ? render(props)
-                  : null
-                : typeof children === "function"
-                ? children(props)
-                : null}
+              {match ? (
+                children ? (
+                  typeof children === "function" ? (
+                    children(props)
+                  ) : (
+                    <Fragment>{children}</Fragment>
+                  )
+                ) : component ? (
+                  React.cloneElement(component, props)
+                ) : render ? (
+                  render(props)
+                ) : null
+              ) : typeof children === "function" ? (
+                children(props)
+              ) : null}
             </RouterContext.Provider>
           );
         }}
