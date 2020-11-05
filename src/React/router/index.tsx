@@ -1,12 +1,20 @@
 import React from "react";
 import { Divider } from "antd";
 // import { Route } from "react-router-dom";
-import Link from './mockRouter/Link'
-import Route from './mockRouter/Route'
-import Switch from './mockRouter/Switch'
-import BrowserRouter from './mockRouter/BrowserRouter'
-function HomePage() {
-  return <div>home-page</div>;
+import Link from "./mockRouter/Link";
+import Route from "./mockRouter/Route";
+import Switch from "./mockRouter/Switch";
+import BrowserRouter from "./mockRouter/BrowserRouter";
+// function HomePage() {
+//   return <div>home-page</div>;
+// }
+
+class HomePage extends React.Component {
+  state = {};
+
+  render() {
+    return <div>home-page</div>;
+  }
 }
 
 function UserPage() {
@@ -61,7 +69,7 @@ class TestRouter extends React.Component<any, any> {
           <br />
           <Link to="/search/123">搜索-动态路路由</Link>
           <Switch>
-            {/* <Route path="/" exact component={HomePage} /> */}
+            <Route path="/" exact component={HomePage} />
             <Route path="/user" exact component={UserPage} />
             <Route path="/login" exact component={LoginPage} />
             <Route path="/children" exact component={ChildrenPage} />

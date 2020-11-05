@@ -3,7 +3,7 @@ import { RouterContext } from "./context";
 class Link extends React.Component {
   state = {};
 
-  static ContextType = RouterContext;
+  static contextType = RouterContext;
 
   handleClick = (event) => {
     event.preventDefault();
