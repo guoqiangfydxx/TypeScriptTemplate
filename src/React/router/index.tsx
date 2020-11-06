@@ -1,12 +1,13 @@
 import React from "react";
 import { Divider } from "antd";
 // import { Route } from "react-router-dom";
-// import { NavLink, Route, Switch, BrowserRouter, Link } from 'react-router-dom'
+// import { NavLink, Route, Switch, BrowserRouter, Link, Prompt } from 'react-router-dom'
 import Link from "./mockRouter/Link";
 import Route from "./mockRouter/Route";
 import Switch from "./mockRouter/Switch";
 import BrowserRouter from "./mockRouter/BrowserRouter";
 import NavLink from './mockRouter/NavLink'
+// import Prompt from './mockRouter/Prompt'
 // function HomePage() {
 //   return <div>home-page</div>;
 // }
@@ -80,6 +81,7 @@ class TestRouter extends React.Component<any, any> {
             fontWeight: 'bold',
             color: 'red'
           }} activeClassName='testClass'>测试</NavLink>
+          {/* <Prompt message="Are you sure you want to leave?" /> */}
           <Switch>
             <Route path="/" exact component={HomePage} />
             <Route path="/user" exact component={UserPage} />

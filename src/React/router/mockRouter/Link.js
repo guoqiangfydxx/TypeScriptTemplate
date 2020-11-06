@@ -8,7 +8,6 @@ class Link extends React.Component {
   handleClick = (event) => {
     event.preventDefault();
     const { to } = this.props;
-    console.log("contenxt>>>>", this.context);
     this.context.history.push(to);
   };
 
