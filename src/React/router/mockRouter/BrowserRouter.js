@@ -16,7 +16,7 @@ class BrowserRouter extends React.Component {
   }
 
   componentDidMount() {
-    this.unlisten = this.history.listen((location) => {
+    this.unlisten = this.history.listen(({ location }) => {
       this.setState({
         location,
       });

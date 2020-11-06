@@ -1,10 +1,12 @@
 import React from "react";
 import { Divider } from "antd";
 // import { Route } from "react-router-dom";
+// import { NavLink, Route, Switch, BrowserRouter, Link } from 'react-router-dom'
 import Link from "./mockRouter/Link";
 import Route from "./mockRouter/Route";
 import Switch from "./mockRouter/Switch";
 import BrowserRouter from "./mockRouter/BrowserRouter";
+import NavLink from './mockRouter/NavLink'
 // function HomePage() {
 //   return <div>home-page</div>;
 // }
@@ -46,6 +48,11 @@ function SearchPage(props: any) {
 function LoginPage() {
   return <div>login-page</div>;
 }
+
+function NavLinkPage() {
+  return <div>nav-link-page</div>
+}
+
 class TestRouter extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
@@ -68,12 +75,18 @@ class TestRouter extends React.Component<any, any> {
           <Link to="/render">render</Link>
           <br />
           <Link to="/search/123">搜索-动态路路由</Link>
+          <br />
+          <NavLink to='/faq' activeStyle={{
+            fontWeight: 'bold',
+            color: 'red'
+          }} activeClassName='testClass'>测试</NavLink>
           <Switch>
             <Route path="/" exact component={HomePage} />
             <Route path="/user" exact component={UserPage} />
             <Route path="/login" exact component={LoginPage} />
             <Route path="/children" exact component={ChildrenPage} />
             <Route path="/render" exact component={RenderPage} />
+            <Route path='/faq' exact component={NavLinkPage} />
             <Route path="/search/:id" exact component={SearchPage} />
             <Route component={DetailPage} path={`/search/:id/detail`} />
             {/* // 如果Route没有path参数，将始终被匹配 */}
