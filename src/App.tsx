@@ -39,6 +39,7 @@ import TestChildren from './React/React-children'
 import TestComponent from './React/component'
 import TestHooks from './React/hooks'
 import TestRoute from './React/router'
+import NestingExample from './React/router/examples'
 import "./App.less";
 
 const ref: any = React.createRef()
@@ -103,6 +104,7 @@ const App: React.FC = () => {
       <TestComponent />
       <TestHooks />
       <TestRoute />
+      <NestingExample />
     </div>
   );
 };
