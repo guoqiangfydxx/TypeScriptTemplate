@@ -6,7 +6,7 @@ import {
   Link,
   useHistory,
   useLocation,
-  useParams
+  useParams,
 } from "react-router-dom";
 
 // This example shows how to render two different screens
@@ -28,7 +28,7 @@ export default function ModalGalleryExample() {
 
 function ModalSwitch() {
   let location = useLocation();
-  console.log('moalSwitch<<<<<', location)
+  console.log("moalSwitch<<<<<", location);
 
   // This piece of state is set when one of the
   // gallery links is clicked. The `background` state
@@ -37,7 +37,7 @@ function ModalSwitch() {
   // use it as the location for the <Switch> so
   // we show the gallery in the background, behind
   // the modal.
-  let background = location.state && location.state.background;
+  let background = location.state && (location.state as any).background;
 
   return (
     <div>
@@ -58,7 +58,7 @@ const IMAGES = [
   { id: 1, title: "Lime Green", color: "LimeGreen" },
   { id: 2, title: "Tomato", color: "Tomato" },
   { id: 3, title: "Seven Ate Nine", color: "#789" },
-  { id: 4, title: "Crimson", color: "Crimson" }
+  { id: 4, title: "Crimson", color: "Crimson" },
 ];
 
 function Thumbnail({ color }: { color: string }) {
@@ -67,7 +67,7 @@ function Thumbnail({ color }: { color: string }) {
       style={{
         width: 50,
         height: 50,
-        background: color
+        background: color,
       }}
     />
   );
@@ -79,7 +79,7 @@ function Image({ color }: { color: string }) {
       style={{
         width: "100%",
         height: 400,
-        background: color
+        background: color,
       }}
     />
   );
@@ -107,14 +107,14 @@ function Gallery() {
 
   return (
     <div>
-      {IMAGES.map(i => (
+      {IMAGES.map((i) => (
         <Link
           key={i.id}
           to={{
             pathname: `/img/${i.id}`,
             // This is the trick! This link sets
             // the `background` in location state.
-            state: { background: location }
+            state: { background: location },
           }}
         >
           <Thumbnail color={i.color} />
@@ -142,7 +142,7 @@ function ImageView() {
 function Modal() {
   let history: any = useHistory();
   let { id } = useParams() as { id: string };
-  console.log('modal>>>>>>>>>>>>>', id)
+  console.log("modal>>>>>>>>>>>>>", id);
   let image = IMAGES[parseInt(id, 10)];
 
   if (!image) return null;
@@ -161,7 +161,7 @@ function Modal() {
         left: 0,
         bottom: 0,
         right: 0,
-        background: "rgba(0, 0, 0, 0.15)"
+        background: "rgba(0, 0, 0, 0.15)",
       }}
     >
       <div
@@ -173,7 +173,7 @@ function Modal() {
           left: "10%",
           right: "10%",
           padding: 15,
-          border: "2px solid #444"
+          border: "2px solid #444",
         }}
       >
         <h1>{image.title}</h1>
