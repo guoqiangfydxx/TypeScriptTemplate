@@ -1,4 +1,4 @@
-import React from "./React/react/mockReact/kreact";
+import React from "./React/react/mockReact/kReact";
 import ReactDOM from "./React/react/mockReact/kReactDom";
 import Component from "./React/react/mockReact/Component";
 import "./index.css";
@@ -49,13 +49,15 @@ const App = (
     </div>
     <FunctionComponent name="tom" />
     <ClassComponent name={"jane"} />
+    {/* <FunctionComponent name="tom" />
+    <ClassComponent name={"jane"} />
     <>
       <h1>好</h1>
       <h2>h2标题</h2>
     </>
     {[3, 7, 8].map((item) => (
       <div key={item}>{item}</div>
-    ))}
+    ))} */}
   </div>
 );
 ReactDOM.render(App, document.getElementById("root"));

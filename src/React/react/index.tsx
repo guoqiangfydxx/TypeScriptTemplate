@@ -1,5 +1,5 @@
 import { Component } from "react";
-import React from "./mockReact/kreact";
+import React from "./mockReact/kreact1";
 class TestReact extends Component<any, any> {
   constructor(props: any) {
     super(props);
