@@ -1,6 +1,7 @@
 import React from "./React/react/mockReact/kReact";
-import ReactDOM from "./React/react/mockReact/kReactDom";
+import ReactDOM, { useState } from "./React/react/mockReact/kReactDom";
 import Component from "./React/react/mockReact/Component";
+import { Button } from "antd";
 import "./index.css";
 // import App from "./React/react/index.tsx";
 // import App from "./App";
@@ -20,7 +21,21 @@ import "./index.css";
 //   document.getElementById("root")
 // );
 function FunctionComponent({ name }) {
-  return <div>this is a function component --- {name}</div>;
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    <div>
+      this is a function component --- {name}
+      <p>{`count: ${count}`}</p>
+      <button onClick={handleClick}>add</button>
+      <div>this is a div</div>
+      {/* <Button onClick={handleClick}>click me</Button> */}
+    </div>
+  );
 }
 
 class ClassComponent extends Component {
@@ -49,6 +64,10 @@ const App = (
     </div>
     <FunctionComponent name="tom" />
     <ClassComponent name={"jane"} />
+    <>
+      <h1>好</h1>
+      <h2>h2标题</h2>
+    </>
     {/* <FunctionComponent name="tom" />
     <ClassComponent name={"jane"} />
     <>
