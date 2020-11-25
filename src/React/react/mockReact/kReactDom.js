@@ -62,6 +62,7 @@ function updateNode(node, prevProps, props) {
 // 协调子节点
 function reconcilerChildren(workInProgressFiber, children) {
   // 1. 针对每一个子节点都要构建一个新的fiber
+  // 这里只是针对相同位置上的新老节点进行了对比，没有考虑移动的情况
   let prevFiber = null;
   let oldFiber = workInProgressFiber.base && workInProgressFiber.base.child;
   for (let i = 0; i < children.length; i++) {
