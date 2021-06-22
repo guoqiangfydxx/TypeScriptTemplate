@@ -1,7 +1,10 @@
-import React from "./React/react/mockReact/kReact";
-import ReactDOM, { useState } from "./React/react/mockReact/kReactDom";
-import Component from "./React/react/mockReact/Component";
+// import React from "./React/react/mockReact/kReact";
+// import ReactDOM, { useState } from "./React/react/mockReact/kReactDom";
+// import Component from "./React/react/mockReact/Component";
+import React, { useState, Component } from "react";
+import ReactDOM from "react-dom";
 import { Button } from "antd";
+import Dictionary from "./dictionary";
 import "./index.css";
 // import App from "./React/react/index.tsx";
 // import App from "./App";
@@ -77,6 +80,7 @@ const App = (
     {[3, 7, 8].map((item) => (
       <div key={item}>{item}</div>
     ))} */}
+    <Dictionary />
   </div>
 );
 ReactDOM.render(App, document.getElementById("root"));
